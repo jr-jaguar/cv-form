@@ -1,0 +1,144 @@
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0,0,0,0.4);
+}
+
+.modal-content {
+    display: flex;
+    flex-direction: column;
+    background: #F0F0F0;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 678px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+#contactForm{
+    margin: 40px;
+}
+
+.form-bottom{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    @media (max-width: 1440px) {
+        flex-direction: column;
+    }
+    .file-upload,
+     button[type="submit"] {
+        flex: 1;
+        max-width: 163px;
+
+        @media (max-width: 1440px) {
+            max-width: 100%;
+        }
+    }
+
+    .file-upload {
+        position: relative;
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        text-align: center;
+        //width: 163px;
+        border: 1px solid #BFC0C3;
+        border-radius: 4px;
+        box-sizing: border-box;
+    }
+
+    .file-upload span {
+        display: inline-block;
+        vertical-align: middle;
+        padding: 8px;
+        &.upload-icon{
+            border-right: 1px solid #BFC0C3;
+            padding-top: 10px;
+        }
+    }
+
+    .file-upload img {
+        width: 20px;
+        height: 20px;
+    }
+
+    input[type="file"] {
+        display: none;
+    }
+}
+
+.close {
+    color: #aaa;
+    font-size: 24px;
+    font-weight: 400;
+    align-self: flex-end;
+    margin-right: 10px;
+    background: #F0F0F0;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal-content h2 {
+    font-family: Geometria;
+    font-size: 48px;
+    font-weight: 400;
+    line-height: 54px;
+    letter-spacing: -0.02em;
+    text-align: left;
+    margin: 0 40px;
+
+    @media (max-width: 1440px) {
+        font-size: 24px;
+        line-height: 30px;
+    }
+;
+}
+
+.modal-content {
+    margin: 20px;
+}
+
+.modal-content button[type="submit"] {
+    background-color: #2B2C38;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.modal-content button[type="submit"]:hover {
+    background-color: #2B2C38;
+}
+
+.modal-content form input[type="text"],
+.modal-content form input[type="email"],
+.modal-content form input[type="tel"],
+.modal-content form textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #D1D1D1;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.modal-content form input[type="tel"]{
+    margin-left: 50px;
+}
+
+.modal-content form input[type="checkbox"] {
+    margin: 5px 0;
+}
