@@ -4,8 +4,10 @@ namespace App\Http\Controllers;
 
 use App\Events\ContactSaved;
 use App\Http\Requests\ContactFormRequest;
+use App\Mail\ContactSavedMail;
 use App\Services\ContactServiceInterface;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
 
 class ContactController extends Controller
 {

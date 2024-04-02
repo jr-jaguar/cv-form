@@ -26,6 +26,6 @@ class SendContactEmail implements ShouldQueue
     public function handle(ContactSaved $event): void
     {
         $contactData = $event->contact;
-        Mail::to($contactData['email'])->send(new ContactSavedMail($contactData));
+        Mail::to(env('MAIL_FROM_ADDRESS'))->send(new ContactSavedMail($contactData));
     }
 }
